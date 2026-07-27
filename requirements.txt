@@ -1,0 +1,4 @@
+torch>=2.0
+tiktoken>=0.5
+sentencepiece>=0.1.99
+matplotlib>=3.5
