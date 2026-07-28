@@ -1,4 +1,14 @@
+# Core model code (notebook 02)
 torch>=2.0
+
+# Tokenizers (notebook 01)
 tiktoken>=0.5
 sentencepiece>=0.1.99
+
+# Figures: attention heatmap, loss curves, token-cost chart
 matplotlib>=3.5
+numpy>=1.24
+
+# Only needed to run the notebooks locally.
+# Colab users can ignore this file entirely.
+notebook>=7.0
