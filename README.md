@@ -4,6 +4,10 @@ A two-part, code-first walkthrough of how a transformer actually works — from 
 
 Everything runs in Google Colab. No GPU required (though it helps).
 
+![Self-attention weights from four heads of a trained transformer, showing the triangular causal mask](docs/attention_heatmap-comparison.png)
+
+*Attention weights from the final block of the model built in Part 2, reading the prompt "First Citizen: We are accounted poor". The dark upper triangle is the causal mask — no position may attend to the future. Each head has learned a different pattern.*
+
 ---
 
 ## Notebooks
@@ -12,6 +16,8 @@ Everything runs in Google Colab. No GPU required (though it helps).
 |---|---|---|
 | **Part 1** | **Tokenization** — character vs word vs subword, BPE implemented from scratch, then `tiktoken` and `SentencePiece` compared side by side | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jino-shaji/transformer-from-scratch/blob/main/notebooks/01_tokenization_sentencepiece_and_tiktoken.ipynb) |
 | **Part 2** | **Bigram → Transformer** — build a bigram model, watch it fail, fix it with self-attention, end with a small GPT | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jino-shaji/transformer-from-scratch/blob/main/notebooks/02_bigram_to_transformer.ipynb) |
+
+📖 Written walkthrough of the maths: [How a Transformer Actually Works](https://www.kodeoverflow.com/post/ai/how-a-transformer-actually-works)
 
 ---
 
@@ -33,7 +39,7 @@ Everything runs in Google Colab. No GPU required (though it helps).
 - Multi-head attention, feed-forward layers, residual connections, layer norm
 - Positional embeddings
 - A ~0.8M parameter GPT trained on Tiny Shakespeare
-- An attention heatmap showing what the model actually looked at
+- The attention heatmap above, generated from your own trained model
 
 ---
 
